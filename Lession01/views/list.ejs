@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+
+
+
+<% if(users.length){ %>
+
+<input type="text" value="User List Length <%= users.length%>" />
+
+    <ul>
+        <% users.forEach(function(Item){ %>
+            <li><%= Item.content %>  :  <%= Item.title %></li>
+        <% }) %>
+    </ul>
+
+<% }%>
+
+<a href="add">ADD</a>
+</body>
+</html>
